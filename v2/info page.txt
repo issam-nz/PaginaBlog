@@ -1,3 +1,21 @@
-somos los estudiantes de la formacion profesional de grado superior de desarollo de aplicaciones web del centro nazaret
-estamos en el primer año, y lo que hemos visto durante los dos primeros meses son las bases de la creacion de una pagina 
-(web statica) que son html y css , sistemas operativos , Git y Github, programacion con java ...etc.
+<!-- region v1 form -->
+            <form>
+              <!-- Datos personales -->
+              <fieldset class="container-fluid">
+                <legend>Datos Personales</legend>
+                <!-- nombre y apellido -->
+                <div class="row">
+                  <!-- nombre -->
+                  <div class="col-md">
+                    <label for="nombre" class="form-label">nombre</label>
+                    <input type="text" id="nombre" class="form-control">
+                  </div>
+                  <!-- apellido -->
+                  <div class="col-md">
+                    <label for="apellido" class="form-label">apellido</label>
+                    <input type="text" id="apellido" class="form-control">
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+            <!-- end v1 form  -->

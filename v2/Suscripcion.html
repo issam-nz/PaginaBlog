@@ -10,7 +10,7 @@
 </head>
 
 <body>
-<!--
+  <!--
   . main
   -     nav
   -     section           
@@ -26,7 +26,6 @@
       <div class="container">
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
           <div class="container-fluid">
-            <!-- <a class="navbar-brand" href="#">Navbar</a> -->
 
             <a href="#"><img src="./img/nazaret-logo.gif" alt=""></a>
 
@@ -45,41 +44,75 @@
                   <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                     aria-haspopup="true" aria-expanded="false">Blog</a>
                   <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Lenguajes de marcas</a>
-                    <a class="dropdown-item" href="#">BBDDs</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="Etiquetas/Lenguajes.html">Lenguajes de marcas</a>
+                    <a class="dropdown-item" href="Etiquetas/BBDD.html">BBDDs</a>
+                    <a class="dropdown-item" href="Etiquetas/Sistemas.html">Sistemas Informáticos</a>
                   </div>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="Suscripcion.html">Suscripción</a>
                 </li>
               </ul>
-              <!-- 
-            <ul class="navbar-nav ms-md-auto">
-              <li class="nav-item">
-                        <a target="_blank" rel="noopener" class="nav-link" href="#"><i class="bi bi-github"></i> GitHub</a>
-                      </li>
-                      <li class="nav-item">
-                        <a target="_blank" rel="noopener" class="nav-link" href="#"><i class="bi bi-twitter"></i> Twitter</a>
-                      </li> -->
-              </ul>
-              <!-- <form class="d-flex">
-                      <input class="form-control me-sm-2" type="text" placeholder="Search">
-                      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-                    </form> -->
             </div>
           </div>
         </nav>
       </div>
     </div>
-    
-
     <!--section de articles y aside -->
     <section>
       <div class="container  mx-lg-7 my-4">
         <div class="row">
           <!-- fornulario -->
           <div class="col-lg-8">
+            <form>
+              <!-- Datos personales -->
+              <fieldset class="container-fluid">
+                <legend>Datos Personales</legend>
+                <!-- nombre y apellido -->
+                <div class="row my-1">
+                  <!-- nombre -->
+                  <div class="col-md">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" id="nombre" class="form-control" placeholder="Nombre">
+                  </div>
+                  <!-- apellido -->
+                  <div class="col-md">
+                    <label for="apellido" class="form-label">Apellido</label>
+                    <input type="text" id="apellido" class="form-control" placeholder="Apellido">
+                  </div>
+                </div>
+                <!-- username -->
+                <div class="form-group my-1">
+                  <label for="username" class="form-label">Username</label>
+                  <input type="text" class="form-control" id="username" placeholder="Username">
+                </div>
+                <!-- email -->
+                <div class="form-group my-1">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" placeholder="Enter email">
+                </div>
+                <!-- contraseña -->
+                <div class="form-group my-1">
+                  <label for="cantrasena" class="form-label">Contraseña</label>
+                  <input type="password" class="form-control" id="contrasena" placeholder="Contraseña">
+                </div>
+                <!-- checkbox -->
+                <!-- acceptar las condiciones -->
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="checkCondiciones">
+                  <label class="form-check-label" for="checkCondiciones">
+                    Acceptar las condiciones
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="checkNotificaciones" checked>
+                  <label class="form-check-label" for="checkNotificaciones">
+                    Recibir notificaciones
+                  </label>
+                </div>
+                <button type="submit" class="btn btn-primary my-1">inscribirse</button>
+              </fieldset>
+            </form>
           </div>
 
           <!-- aside -->
