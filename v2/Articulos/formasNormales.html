@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formas Normales</title>
+    <link rel="stylesheet" href="../styles/bootstrap.min.css">
+</head>
+
+<body>
+    <!--
+  . main
+  -     nav
+  -     section           
+  +           articles ->   articulo de formas normales        
+  +           aside 
+  -     footer
+ -->
+
+    <!-- main -->
+    <main>
+        <!-- nav section -->
+        <div class="container-fluid bg-primary">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                    <div class="container-fluid">
+
+                        <a href="#"><img src="../img/nazaret-logo.gif" alt=""></a>
+
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarColor01">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="../Inicio.html">Inicio
+                                        <span class="visually-hidden">(current)</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                                        aria-haspopup="true" aria-expanded="false">Blog</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="../Etiquetas/Lenguajes.html">Lenguajes de
+                                            marcas</a>
+                                        <a class="dropdown-item" href="../Etiquetas/BBDD.html">BBDDs</a>
+                                        <a class="dropdown-item" href="../Etiquetas/Sistemas.html">Sistemas
+                                            Informáticos</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../Suscripcion.html">Suscripción</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+
+        <!--section de articles y aside -->
+        <section>
+            <div class="container  mx-lg-7 my-4">
+                <div class="row">
+                    <!-- los articulos del Blog -->
+                    <div class="col-lg-8">
+                        <article>
+                            <div>
+                                <h1>Normalización de bases de datos</h1>
+                                <!-- span.font-weight-bold -->
+                                <p>
+                                    <span class="font-weight-bold">La información y los datos suelen ser el mayor activo
+                                        de una compañía</span>, máxime a día
+                                    de hoy en pleno auge de la data. Por ello, la normalización de datos es clave en la
+                                    gestión de los sistemas de información de una organización, <span
+                                        class="font-weight-bold">
+                                        tanto en grandes como
+                                        pequeñas empresas.
+                                    </span>
+                                </p>
+                                <h2>En qué consiste la normalización de una base de datos</h2>
+                                <p>
+                                    Se trata de un proceso de organización de las bases de datos en el que se aplica una
+                                    serie de reglas para tener una estructura de datos saneada. En otras palabras, <span
+                                        class="font-weight-bold">
+                                        el
+                                        objetivo es eliminar duplicidades o dependencias innecesarias en las tablas de
+                                        datos
+                                    </span>
+                                    y entre las relaciones que estas unen - o bien aportarlas, si la necesidad es la
+                                    contraria-.
+                                </p>
+                                <p>
+                                    Por ejemplo, la normalización de los datos fiscales en curso de una empresa
+                                    permitiría eliminar de ese registro otros indicadores temporales, relativos a su
+                                    histórico, o que dependan de terceras tablas.
+                                </p>
+                                <p>
+                                    La correcta asignación del <span class="font-weight-bold">valor de los datos</span>
+                                    es tan importante porque será la única
+                                    manera de garantizar que se eliminan redundancias y que, por ende, <span
+                                        class="font-weight-bold">
+                                        los cambios en la
+                                        data se implementen y cruzan correctamente
+                                    </span>.
+                                </p>
+                                <h3>Ventajas de la normalización de datos</h3>
+                                <p>
+                                    El enriquecimiento de una base de datos supone una serie de ventajas incuestionables
+                                    para la empresa. En primer lugar, al evitar duplicidades se simplifica notablemente
+                                    la gestión y actualización de datos en los registros. Esto también se traduce, en
+                                    términos generales, a una mejora en la productividad del equipo, además de una mejor
+                                    gestión de la base de datos.
+                                </p>
+                                <p>
+                                    También facilita la integración de datos con fuentes externas y, en última
+                                    instancia, refuerza la veracidad y la seguridad de la información con la que se
+                                    trabaja.
+                                </p>
+                            </div>
+                            <div>
+                                <h2>Niveles de normalización de una base de datos</h2>
+                                <iframe width="90%" height="315" src="https://www.youtube.com/embed/D_Alt-GY-xo"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                                <p>
+                                    Aunque existen muchos niveles de normalización, son solo tres los más habituales en
+                                    las empresas. Nos referiremos a ellos como “Formas Normales” y cada una aplica unas
+                                    reglas o criterios que determinan el nivel de vulnerabilidad de los datos a posibles
+                                    inconsistencias o anomalías. A mayor nivel de forma normal, mayor normalización.
+                                </p>
+                                <!-- primera forma  -->
+                                <h3>Primera forma normal</h3>
+                                <p>
+                                    Para que nuestros datos estén en primera forma normal es necesario, en primer lugar,
+                                    contar con tablas separadas para cada conjunto de datos relacionados. A continuación
+                                    se debe asignar una clave primaria a cada grupo de datos, que no contenga atributos
+                                    nulos.
+                                </p>
+                                <p>Otras claves importantes son no incluir datos de significado similar en la misma
+                                    tabla, que los atributos sean mínimos e indivisibles y que las columnas y filas sean
+                                    independientes, para que un cambio de orden no influya en su significado.</p>
+                                <!-- segunda forma  -->
+                                <h3>Segunda forma normal</h3>
+                                <p>
+                                    A los requisitos de la primera forma normal se suma la gestión de múltiples
+                                    registros. Es decir, si un dato aplica a diferentes localizaciones, debemos crear
+                                    tablas separadas y relacionarlas a través de una clave ajena o externa. Por ejemplo,
+                                    para hacer seguimiento del desarrollo de una app, diferenciamos los datos de la
+                                    aplicación de los de las distintas fases de implementación. Así, los datos se
+                                    relacionan mediante la clave ajena.
+                                </p>
+                                <!-- tercera forma  -->
+                                <h3>Tercera forma normal</h3>
+                                <p>
+                                    Para alcanzar este nivel, los datos del mismo registro deben estar estructurados de
+                                    modo que todos los campos dependan de la clave primaria. Este nivel es conveniente
+                                    en tablas de datos que requieren de continua actualización. Así evitamos desglosar
+                                    la información en diferentes tablas.
+                                </p>
+                                <p>
+                                    Normalizar y enriquecer la base de datos de tu empresa permite estructurar y
+                                    gestionar correctamente toda la información y el llamado “dato único”, ese que
+                                    supone el máximo valor de la organización y que condiciona incluso la toma de
+                                    decisiones directivas. Si necesitas más información al respecto o recibir
+                                    asesoramiento para el tratamiento de datos, ¡no dudes en contactar con nosotros!
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- aside -->
+                    <div class="col-lg-4">
+                        <!-- Search widget-->
+                        <div class="card mb-4">
+                            <div class="card-header">Search</div>
+                            <div class="card-body">
+                                <div class="input-group">
+                                    <input class="form-control" type="text" placeholder="Enter search term..."
+                                        aria-label="Enter search term..." aria-describedby="button-search">
+                                    <button class="btn btn-primary" id="button-search" type="button">Go!</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Categories widget-->
+                        <div class="card mb-4">
+                            <div class="card-header">Categories</div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <ul class="list-unstyled mb-0">
+                                            <li><a href="#!">Web Design</a></li>
+                                            <li><a href="#!">HTML</a></li>
+                                            <li><a href="#!">Freebies</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <ul class="list-unstyled mb-0">
+                                            <li><a href="#!">JavaScript</a></li>
+                                            <li><a href="#!">CSS</a></li>
+                                            <li><a href="#!">Tutorials</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Side widget-->
+                        <div class="card mb-4">
+                            <div class="card-header">Side Widget</div>
+                            <div class="card-body">You can put anything you want inside of these side widgets. They are
+                                easy
+                                to use, and feature the Bootstrap 5 card component!</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- footer -->
+
+
+
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
