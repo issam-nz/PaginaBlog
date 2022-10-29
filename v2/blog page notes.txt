@@ -1,6 +1,6 @@
 
 cosas q me gustaria hacer:
-    - Inicio -> cambiar el tipo de list in the content
+    - cambiar el tipo de list in the content
     - añadir el articulo flexbox a la etiqueta categoria
 
 
