@@ -1,10 +1,13 @@
-cosas q tengo q hacer:
-    - modificar el side bar en todo el proyecto
-    - contact us y redes sociales (footer de todas las paginas)
-
-
-
 
 cosas q me gustaria hacer:
     - Inicio -> cambiar el tipo de list in the content
     - añadir el articulo flexbox a la etiqueta categoria
+
+
+raport:
+blog tiene 3 Etiquetas (lenguajes, BBDD, Sistemas)
+cada Etiqueta tiene al menos un articulo 
+
+
+en categegorias(en sideBar las lineas son clickables)
+en Suscripcion si el usuoario no ha aceptado las condiciones no puede suscribirse
