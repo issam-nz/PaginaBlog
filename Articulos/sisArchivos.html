@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formas Normales</title>
+    <link rel="stylesheet" href="../styles/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!--
+  . main
+  -     nav
+  -     section           
+  +           articles ->   articulo de sistemas de archivos     
+  +           aside 
+  -     footer
+ -->
+
+    <!-- main -->
+    <main>
+        <!-- nav section -->
+        <div class="container-fluid bg-primary">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                    <div class="container-fluid">
+
+                        <a href="#"><img src="../img/nazaret-logo.gif" alt=""></a>
+
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarColor01">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="../Inicio.html">Inicio
+                                        <span class="visually-hidden">(current)</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                                        aria-haspopup="true" aria-expanded="false">Blog</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="../Etiquetas/Lenguajes.html">Lenguajes de
+                                            marcas</a>
+                                        <a class="dropdown-item" href="../Etiquetas/BBDD.html">BBDDs</a>
+                                        <a class="dropdown-item" href="../Etiquetas/Sistemas.html">Sistemas
+                                            Informáticos</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../Suscripcion.html">Suscripción</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+
+        <!--section de articles y aside -->
+        <section>
+            <div class="container  mx-lg-7 my-4">
+                <div class="row">
+                    <!-- los articulos del Blog -->
+                    <div class="col-lg-8">
+                        <article>
+                            <div>
+                                <h1>¿Qué es un sistema de archivos y para qué sirven?</h1>
+                                <p>
+                                    Todos los sistemas operativos incorporan un sistema de archivos, o varios sistemas
+                                    de archivos diferentes, para controlar cómo se almacena y cómo se recupera la
+                                    información de los diferentes soportes, como discos duros, unidades SSD y también
+                                    unidades de almacenamiento extraíble como pendrives o tarjetas de memoria. Si no
+                                    tuviéramos un sistema de archivos, el sistema operativo no sabría dónde termina un
+                                    determinado dato grabado y dónde empieza el siguiente, por tanto, es uno de los
+                                    aspectos más importantes que debemos tener en cuenta.
+                                </p>
+                                <p>
+                                    Las principales funciones de cualquier sistema de archivos es asignar espacio a los
+                                    diferentes archivos, administrar el espacio libre, estructurar la información
+                                    guardada para que sea accesible de forma fácil y rápida. Otro aspecto muy importante
+                                    que debemos tener en cuenta son los sectores, más concretamente su tamaño, en estos
+                                    sectores es donde se almacena la información. Otras características de los sistemas
+                                    de archivos son que proporcionan métodos para crear, copiar, mover, renombrar e
+                                    incluso eliminar los archivos y directorios que nosotros tenemos en el soporte. Los
+                                    sistemas de archivos también incorporan algunas características muy importantes como
+                                    listas de control de accesos (ACL) para controlar los permisos, mecanismos para
+                                    evitar o mitigar la fragmentación, posibilidad de tener journaling (mejora la
+                                    integridad del sistema de archivos) y la posibilidad de configurar cuotas de discos
+                                    entre otras funcionalidades.
+                                </p>
+                                <p>
+                                    Actualmente disponemos de un total de tres sistemas de archivos diferentes que son
+                                    ampliamente utilizados en servidores NAS de los diferentes fabricantes, y, por
+                                    supuesto, en los sistemas operativos basados en Linux y FreeBSD para almacenamiento
+                                    de datos en servidores, estos sistemas de archivos son EXT4, Btrfs y ZFS, los tres
+                                    sistemas de archivos tienen características diferentes, y unos se comportan mejor en
+                                    diferentes escenarios.
+                                </p>
+                            </div>
+                            <!-- EXT4 -->
+                            <div>
+                                <h2>EXT4</h2>
+                                <P>
+                                    EXT4 es el principal sistema de archivos de cualquier sistema operativo basado en
+                                    Linux, este sistema de archivos es transaccional (con journaling), e incorpora
+                                    mejoras muy importantes respecto a sus predecesores como soporte para volúmenes más
+                                    grandes, menor uso de CPU y mejoras en la velocidad de lectura y escritura. Algunas
+                                    características muy importantes de EXT4 es que permite la reserva de espacio en
+                                    disco sin necesidad de rellenarlo todo con ceros, algo que se hacía habitualmente en
+                                    otros sistemas de archivos, además, este espacio reservado suele ser contiguo con el
+                                    objetivo de evitar o mitigar la fragmentación del sistema de archivos, esta función
+                                    está relacionada con «Allocate-on-flush» o conocida como reserva de memoria
+                                    retrasada, esto consiste en reservar el bloque de memoria justo cuando esté a punto
+                                    de ser escrita en disco, esto mejora el rendimiento y reduce la fragmentación.
+                                </P>
+                                <p>
+                                    EXT4 dispone de técnicas para evitar la fragmentación como la que hemos explicado,
+                                    pero también dispone de una herramienta para desfragmentar ficheros individuales o
+                                    el volumen entero sin necesidad de desmontar el disco, aunque lógicamente, mientras
+                                    está en proceso de desfragmentación tendremos un sistema de archivos más lento.
+                                </p>
+                                <p>
+                                    Este sistema de archivos tiene las siguientes características y límites:
+                                </p>
+                                <ul>
+                                    <li>Máximo tamaño del archivo: 16TiB usando bloques de 4K.</li>
+                                    <li>Máximo número de archivos: 4.000 millones</li>
+                                    <li>Tamaño máximo del nombre del archivo: 255 bytes</li>
+                                    <li>Tamaño máximo del volumen: 1EiB</li>
+                                    <li>Cifrado de datos transparente: sí</li>
+                                    <li>Copy on write: no</li>
+                                    <li>Compresión transparente: no</li>
+                                    <li>Deduplicación transparente: no</li>
+                                </ul>
+                                <p>
+                                    Una vez que hemos conocido las principales características de EXT4, vamos a hablar
+                                    sobre Btrfs, el que se conoce como sucesor natural del sistema de archivos EXT4.
+                                </p>
+                            </div>
+                            <!-- Btrfs -->
+                            <div>
+                                <h2>Btrfs</h2>
+                                <p>
+                                    El sistema de archivos Btrfs nació como sucesor natural de EXT4, su objetivo es
+                                    sustituirlo eliminando el mayor número de sus limitaciones, sobre todo lo referido
+                                    al tamaño máximo de los ficheros. Las principales características de este sistema de
+                                    archivos es que está orientado sobre todo a servidores, dispone de una asignación
+                                    dinámica de inodos, no es necesario fijar un número máximo al crear el sistema de
+                                    archivos como sí ocurre con EXT4, permite configurar volúmenes de manera muy
+                                    avanzada, con la posibilidad de configurar snapshots o instantáneas escribibles y
+                                    también permite snapshots de snapshots. Otras características son que permite
+                                    realizar mirroring y striping a nivel de objetivo si tenemos varios discos duros, es
+                                    capaz de realizar comprobación de datos y metadatos en tiempo real para mejorar al
+                                    máximo la integridad de los datos.
+                                </p>
+                                <p>
+                                    Este sistema de archivos utiliza copy-on-write del registro de todos los datos y
+                                    metadatos, también permite la compresión en línea para ahorrar espacio en disco.
+                                    Btrfs es capaz de comprobar el sistema de archivos sin necesidad de desmontarlo, y
+                                    si lo desmontamos la comprobación es realmente rápida, por supuesto, dispone de un
+                                    modo optimizado para unidades SSD y permite desfragmentarlo sin desmontarlo.
+                                </p>
+                                <p>
+                                    Este sistema de archivos tiene las siguientes características y límites:
+                                </p>
+                                <ul>
+                                    <li>Máximo tamaño del archivo: 16EiB.</li>
+                                    <li>Máximo número de archivos: 18 trillones.</li>
+                                    <li>Tamaño máximo del nombre del archivo: 255 bytes</li>
+                                    <li>Tamaño máximo del volumen: 16EiB.</li>
+                                    <li>Cifrado de datos transparente: no</li>
+                                    <li>Copy on write: sí</li>
+                                    <li>Compresión transparente: sí</li>
+                                    <li>Deduplicación: sí</li>
+                                </ul>
+                                <p>
+                                    Ahora que ya conoces las principales características de Btrfs, vamos a hablar sobre
+                                    ZFS, uno de los sistemas de archivos más avanzados disponibles para sistemas
+                                    operativos Linux y Unix.
+                                </p>
+                            </div>
+                            <!-- ZFS -->
+                            <div>
+                                <h2>ZFS</h2>
+                                <p>
+                                    El sistema de archivos ZFS es uno de los más avanzados que existen actualmente,
+                                    destaca por su gran capacidad, por su gran seguridad respecto a la integridad de los
+                                    datos y por su gran rendimiento en lectura y escritura. ZFS utiliza «Storage Pools»
+                                    o también conocidos como vdevs, a diferencia de los sistemas de archivos
+                                    tradicionales que se ponen encima de un dispositivo hardware como un disco duro, y
+                                    por tanto, necesitan un gestor de volúmenes por separado. Gracias a estos vdevs,
+                                    podremos configurar diferentes «pools» de tipo simple, espejo o utilizar los
+                                    populares RAID-Z para proporcionar tanto redundancia de datos como un mayor
+                                    rendimiento. Además, al sistema de archivos ZFS se le pueden instalar unidades SSD
+                                    que actuarán como caché, o también conocido como «ZFS Intent Log» o «ZIL» para
+                                    mejorar aún más el rendimiento.
+                                </p>
+                                <p>
+                                    Este sistema de archivos hace uso de un modelo transaccional copy-on-write, esto
+                                    hace que los datos activos no se sobreescriben nunca, sino que se copian a otro
+                                    lugar y los datos modificados se escriben en él, con el objetivo de mejorar
+                                    enormemente la integridad de los archivos en caso de corte eléctrico. También
+                                    debemos tener en cuenta que para reducir la sobrecarga se usa el ZIL cuando se
+                                    necesitan escrituras síncronas. La parte negativa de CoW es que tendremos una alta
+                                    fragmentación, y actualmente ZFS nos dispone de ningún método para desfragmentar el
+                                    sistema de archivos, aunque en las próximas versiones se está trabajando en mejorar
+                                    este aspecto.
+                                </p>
+                                <p>
+                                    Otras características de ZFS es que el sistema de ficheros se denomina dataset, el
+                                    cual está dentro de un «storage pools», este dataset puede ser de tipo filesystem
+                                    que es como un volumen normal y corriente, o también como un zvol que sería un
+                                    dispositivo de bloques. Dependiendo de nuestras necesidades, tendremos que crear un
+                                    tipo de dataset u otro. Otra característica muy importante de los dataset son los
+                                    snapshots o también conocidas como instantáneas, el sistema de archivos ZFS es capaz
+                                    de realizar un total de 281 billones de instantáneas, además, se hacen en tiempo
+                                    real por cómo está creado internamente este sistema de archivos.
+                                </p>
+                                <p>
+                                    Este sistema de archivos nos permite configurar la compresión en línea, haciendo uso
+                                    de diferentes algoritmos de compresión para mejorar la velocidad de lectura y
+                                    escritura o para mejorar la compresión y ahorrar más espacio. También podremos
+                                    configurar la función de deduplicación, una característica que nos permitirá ahorrar
+                                    mucho espacio en disco, la parte negativa es que consume una gran cantidad de
+                                    memoria RAM, por lo que es posible que no te interese demasiado activar esta
+                                    funcionalidad.
+                                </p>
+                                <p>
+                                    Este sistema de archivos tiene las siguientes características y límites:
+                                </p>
+                                <ul>
+                                    <li>Máximo tamaño del archivo: 16EiB.</li>
+                                    <li>Máximo número de archivos: 281 billones.</li>
+                                    <li>Tamaño máximo del nombre del archivo: 255 bytes</li>
+                                    <li>Tamaño máximo del volumen: 16EiB.</li>
+                                    <li>Cifrado de datos: sí</li>
+                                    <li>Copy on write: sí</li>
+                                    <li>Compresión transparente transparente: sí</li>
+                                    <li>Deduplicación transparente: sí</li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- aside -->
+                    <div class="col-lg-4">
+
+                        <!-- Search widget-->
+                        <div class="card mb-4">
+                            <div class="card-header">Buscar</div>
+                            <div class="card-body">
+                                <div class="input-group">
+                                    <input class="form-control" type="text" placeholder="ingrese el término de búsqueda"
+                                        aria-label="ingrese el término de búsqueda" aria-describedby="button-search">
+                                    <button class="btn btn-primary" id="button-search" type="button">Buscar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Categories widget-->
+                        <div class="card mb-4">
+                            <div class="card-header">Categorias</div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <ul class="list-unstyled mb-0">
+                                            <li><a href="../Etiquetas/Lenguajes.html">Lenguajes</a></li>
+                                            <li><a href="../Etiquetas/BBDD.html">BBDDs</a></li>
+                                            <li><a href="../Etiquetas/Sistemas.html">Sistemas</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <ul class="list-unstyled mb-0">
+                                            <li><a href="#!">JavaScript</a></li>
+                                            <li><a href="#!">CSS</a></li>
+                                            <li><a href="#!">Tutorials</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Side widget-->
+                        <div class="card mb-4">
+                            <div class="card-header">Side Widget</div>
+                            <div class="card-body">You can put anything you want inside of these side widgets. They are
+                                easy
+                                to use, and feature the Bootstrap 5 card component!</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- footer -->
+    <hr>
+    <footer class=" text-center text-white">
+      <!-- Grid container -->
+      <div class="container">
+        <!-- Section: Social media -->
+        <section class="mb-1">
+          <!-- Facebook -->
+          <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/nazaretzentroa.donostia"
+            role="button"><i class="fab fa-facebook-f"></i></a>
+
+          <!-- Twitter -->
+          <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/nazaretzentroa" role="button"><i
+              class="fab fa-twitter"></i></a>
+
+          <!-- Google -->
+          <a class="btn btn-outline-light btn-floating m-1" href="https://www.nazaret.eus/" role="button"><i
+              class="fab fa-google"></i></a>
+
+          <!-- Instagram -->
+          <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/nazaretzentroa/"" role="
+            button"><i class="fab fa-instagram"></i></a>
+
+          <!-- Linkedin -->
+          <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/issam-el-ouafa-7a8b35251/"
+            role="button"><i class="fab fa-linkedin-in"></i></a>
+
+          <!-- Github -->
+          <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/issam-nz/PaginaBlog.git"
+            role="button"><i class="fab fa-github"></i></a>
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Copyright -->
+        <div class="text-center p-1">
+          © 2022 Copyright:
+          <a class="text-white" href="http://www.nazaret.eus/es/">www.nazaret.eus</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+
+
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
